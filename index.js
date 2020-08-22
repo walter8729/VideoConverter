@@ -10,6 +10,8 @@ const fileUpload = require("express-fileupload");
 
 const app = express();
 
+const PORT = process.env.PORT || 5000
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -80,4 +82,4 @@ app.post("/convert", (req, res) => {
   //.pipe(res, { end: true });
 });
 
-app.listen(5000);
+app.listen(PORT);
